@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+import ImageCard from './ImageCard';
 
 class ImageBoard extends Component 
 {
-    render() 
+    render()
     {
         return (
-            <div className="imageBoard">
-                
-            </div>
-        )
+                <ImageCard />
+        );
     }
 }
 

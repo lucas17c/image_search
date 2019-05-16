@@ -5,15 +5,14 @@ class ImageCard extends Component
     render() 
     {
         return (
-          
             <div className="imageCard">
                 <img
                     src=""
-                    alt="test.jpg" 
+                    alt="" 
                 />
             </div>
         )
     }
-}
+};
 
 export default ImageCard;
