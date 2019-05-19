@@ -8,30 +8,25 @@ class App extends Component
     constructor() 
     {
         super();
-        this.state = 
-        {
-          images: []
-        }
+        this.state = {
+            images: []
+        };
     }
 
     onSearchSubmit = async term => 
     {
     const response = await unsplash.get(`/search/photos`, {params: { query: term },});
-    
-    this.setState({ images: response.data.results })
+    this.setState({images: response.data.results});
     };
 
     render() 
-        {
-            return (
-                <div className="app ui container">
-                <SearchBar 
-                    onSubmit={this.onSearchSubmit}
-                />
-                <ImageBoard />
-                </div>
-            );
-        }
+    {
+        return (<div className="app ui container">
+            <SearchBar onSubmit={this.onSearchSubmit} />
+            <ImageBoard />
+        </div>
+        );
+    }
 }
 
 export default App;

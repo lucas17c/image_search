@@ -5,8 +5,7 @@ class ImageBoard extends Component
 {
     render()
     {
-        return (
-                <ImageCard />
+        return (<ImageCard />
         );
     }
 }

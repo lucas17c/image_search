@@ -4,7 +4,7 @@ class SearchBar extends Component
 {
     constructor() 
     {
-        super ();
+        super();
         this.state = 
         {
             term: ''
@@ -19,30 +19,26 @@ class SearchBar extends Component
 
     onInputChange = e => 
     {
-        this.setState
-        ({
-            term: e.target.value
-        })
+        this.setState({ term: e.target.value });
     };
     
     render() 
     {
-        return (
-            <div className="searchBar ui segment">
-                <form
-                    className="ui form"
-                    onSubmit={this.onFormSubmit}
-                >
-                    <div className="field">
-                        <label>Image Search</label>
-                        <input 
-                            type="text"
-                            onChange={this.onInputChange}
-                            value={this.state.term}
-                        />
-                    </div>
-                </form>
-            </div>
+        return (<div className="searchBar ui segment">
+            <form
+                className="ui form"
+                onSubmit={this.onFormSubmit}
+            >
+                <div className="field">
+                    <label>Image Search</label>
+                    <input 
+                        type="text"
+                        onChange={this.onInputChange}
+                        value={this.state.term}
+                    />
+                </div>
+            </form>
+        </div>
         );
     };
 };
