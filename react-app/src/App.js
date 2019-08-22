@@ -15,16 +15,17 @@ class App extends Component
 
     onSearchSubmit = async term => 
     {
-    const response = await unsplash.get(`/search/photos`, {params: { query: term },});
-    this.setState({images: response.data.results});
+        const response = await unsplash.get(`/search/photos`, {params: { query: term },});
+        this.setState({ images: response.data.results });
     };
 
     render() 
     {
-        return (<div className="app ui container">
-            <SearchBar onSubmit={this.onSearchSubmit} />
-            <ImageBoard />
-        </div>
+        return (
+            <div className="ui container">
+                <SearchBar onSubmit={this.onSearchSubmit} />
+                <ImageBoard images={this.state.images} />
+            </div>
         );
     }
 }
