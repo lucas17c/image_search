@@ -1,12 +1,34 @@
-.imageBoard {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 0 10px;
-    grid-auto-rows: 10px;
+.imageBoard 
+{
+    columns: 3;
+    column-gap: 15px;
     background-color: rgb(255, 255, 255);
 }   
 
-.imageBoard img {
-    width: 250px;
-    height: auto;
+.imageCard
+{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.imageCard img 
+{
+    max-width: 100%;
+}
+
+@media (max-width: 1200px)
+{
+    .imageBoard
+    {
+        columns: 2;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .imageBoard
+    {
+        columns: 1;
+    }
 }

@@ -22,7 +22,7 @@ class App extends Component
     render() 
     {
         return (
-            <div className="ui container">
+            <div className="uiContainer">
                 <SearchBar onSubmit={this.onSearchSubmit} />
                 <ImageBoard images={this.state.images} />
             </div>
