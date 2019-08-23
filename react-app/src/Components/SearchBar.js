@@ -38,9 +38,6 @@ class SearchBar extends Component
                         placeholder="Search beautiful photos"
                         className="search"
                     />
-                    <button
-                        type="submit"
-                    ></button>
                 </div>
             </form>
         </div>
